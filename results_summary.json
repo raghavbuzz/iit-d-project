@@ -1,0 +1,30 @@
+{
+  "architecture": "Stacked Bi-LSTM (256\u2192128\u219264) + MultiHeadAttention + Dense",
+  "corpus": "Shakespeare (3 plays via NLTK Gutenberg)",
+  "vocab_size": 7793,
+  "total_tokens": 67876,
+  "seq_len": 40,
+  "total_params": 4711921,
+  "hyperparameters": {
+    "optimizer": "Adam",
+    "learning_rate": 0.001,
+    "batch_size": 256,
+    "epochs_run": 8,
+    "label_smoothing": 0.05,
+    "embed_dim": 128,
+    "lstm_units": [
+      512,
+      256,
+      128
+    ],
+    "mha_heads": 4
+  },
+  "results": {
+    "test_loss": 7.1311,
+    "test_accuracy": 0.0287,
+    "test_perplexity": 1017.39,
+    "top5_accuracy": 0.1127,
+    "train_accuracy_final": 0.0324,
+    "val_accuracy_best": 0.0372
+  }
+}
